@@ -1,0 +1,39 @@
+Config: B
+Model: GRU
+Dependent variable: global_mse
+Regressors (final): ['const', 'log_learning_rate', 'log_batch_size', 'log_epochs', 'log_patience', 'log_units', 'num_layers', 'dropout', 'recurrent_dropout']
+Logged variables used (original): ['learning_rate', 'batch_size', 'epochs', 'patience', 'units']
+Robust SE: HC1
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             global_mse   R-squared:                       0.680
+Model:                            OLS   Adj. R-squared:                  0.582
+Method:                 Least Squares   F-statistic:                     6.820
+Date:                Wed, 24 Dec 2025   Prob (F-statistic):           7.95e-05
+Time:                        09:20:38   Log-Likelihood:                 101.46
+No. Observations:                  35   AIC:                            -184.9
+Df Residuals:                      26   BIC:                            -170.9
+Df Model:                           8                                         
+Covariance Type:                  HC1                                         
+=====================================================================================
+                        coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------
+const                 0.0161      0.035      0.467      0.641      -0.052       0.084
+log_learning_rate    -0.0162      0.003     -5.165      0.000      -0.022      -0.010
+log_batch_size        0.0048      0.003      1.364      0.173      -0.002       0.012
+log_epochs           -0.0038      0.002     -1.536      0.125      -0.009       0.001
+log_patience         -0.0053      0.006     -0.848      0.397      -0.018       0.007
+log_units            -0.0048      0.005     -1.045      0.296      -0.014       0.004
+num_layers         3.772e-05      0.003      0.011      0.991      -0.007       0.007
+dropout              -0.0694      0.026     -2.699      0.007      -0.120      -0.019
+recurrent_dropout     0.0076      0.026      0.296      0.767      -0.043       0.058
+==============================================================================
+Omnibus:                        2.293   Durbin-Watson:                   1.610
+Prob(Omnibus):                  0.318   Jarque-Bera (JB):                1.838
+Skew:                           0.411   Prob(JB):                        0.399
+Kurtosis:                       2.236   Cond. No.                         147.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)

@@ -1,0 +1,34 @@
+Config: A
+Model: Tree
+Dependent variable: var_mse_across_horizons
+Regressors (final): ['const', 'log_n_estimators', 'max_depth', 'log_min_samples_leaf']
+Logged variables used (original): ['n_estimators', 'min_samples_leaf']
+Robust SE: HC1
+
+                               OLS Regression Results                              
+===================================================================================
+Dep. Variable:     var_mse_across_horizons   R-squared:                       0.814
+Model:                                 OLS   Adj. R-squared:                  0.803
+Method:                      Least Squares   F-statistic:                     123.3
+Date:                     Wed, 24 Dec 2025   Prob (F-statistic):           2.32e-23
+Time:                             09:20:37   Log-Likelihood:                 168.64
+No. Observations:                       55   AIC:                            -329.3
+Df Residuals:                           51   BIC:                            -321.3
+Df Model:                                3                                         
+Covariance Type:                       HC1                                         
+========================================================================================
+                           coef    std err          z      P>|z|      [0.025      0.975]
+----------------------------------------------------------------------------------------
+const                   -0.0041      0.004     -1.030      0.303      -0.012       0.004
+log_n_estimators        -0.0004      0.001     -0.445      0.656      -0.002       0.002
+max_depth                0.0081      0.000     18.829      0.000       0.007       0.009
+log_min_samples_leaf     0.0002      0.002      0.087      0.930      -0.003       0.004
+==============================================================================
+Omnibus:                       17.709   Durbin-Watson:                   1.313
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               21.650
+Skew:                           1.287   Prob(JB):                     1.99e-05
+Kurtosis:                       4.679   Cond. No.                         19.2
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)

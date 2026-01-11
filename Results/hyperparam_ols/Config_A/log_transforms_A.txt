@@ -1,0 +1,8 @@
+Log-transformed variables (when used by a model):
+- batch_size
+- epochs
+- learning_rate
+- min_samples_leaf
+- n_estimators
+- patience
+- units

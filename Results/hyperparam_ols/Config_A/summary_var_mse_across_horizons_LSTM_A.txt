@@ -1,0 +1,39 @@
+Config: A
+Model: LSTM
+Dependent variable: var_mse_across_horizons
+Regressors (final): ['const', 'log_learning_rate', 'log_batch_size', 'log_epochs', 'log_patience', 'log_units', 'num_layers', 'dropout', 'recurrent_dropout']
+Logged variables used (original): ['learning_rate', 'batch_size', 'epochs', 'patience', 'units']
+Robust SE: HC1
+
+                               OLS Regression Results                              
+===================================================================================
+Dep. Variable:     var_mse_across_horizons   R-squared:                       0.520
+Model:                                 OLS   Adj. R-squared:                  0.372
+Method:                      Least Squares   F-statistic:                     3.287
+Date:                     Wed, 24 Dec 2025   Prob (F-statistic):             0.0100
+Time:                             09:20:37   Log-Likelihood:                 260.40
+No. Observations:                       35   AIC:                            -502.8
+Df Residuals:                           26   BIC:                            -488.8
+Df Model:                                8                                         
+Covariance Type:                       HC1                                         
+=====================================================================================
+                        coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------
+const              1.364e-06      0.000      0.004      0.997      -0.001       0.001
+log_learning_rate -4.794e-05   4.63e-05     -1.034      0.301      -0.000    4.29e-05
+log_batch_size     3.523e-05   3.04e-05      1.158      0.247   -2.44e-05    9.49e-05
+log_epochs         6.851e-05    2.8e-05      2.444      0.015    1.36e-05       0.000
+log_patience      -6.702e-05   6.53e-05     -1.027      0.305      -0.000    6.09e-05
+log_units          4.505e-05   4.45e-05      1.014      0.311   -4.21e-05       0.000
+num_layers        -9.267e-05   4.18e-05     -2.218      0.027      -0.000   -1.08e-05
+dropout              -0.0010      0.000     -3.164      0.002      -0.002      -0.000
+recurrent_dropout     0.0002      0.000      0.708      0.479      -0.000       0.001
+==============================================================================
+Omnibus:                        2.885   Durbin-Watson:                   1.793
+Prob(Omnibus):                  0.236   Jarque-Bera (JB):                1.655
+Skew:                           0.434   Prob(JB):                        0.437
+Kurtosis:                       3.617   Cond. No.                         140.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)

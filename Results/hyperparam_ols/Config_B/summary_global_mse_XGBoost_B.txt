@@ -1,0 +1,36 @@
+Config: B
+Model: XGBoost
+Dependent variable: global_mse
+Regressors (final): ['const', 'log_n_estimators', 'max_depth', 'log_learning_rate', 'subsample', 'colsample_bytree']
+Logged variables used (original): ['n_estimators', 'learning_rate']
+Robust SE: HC1
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:             global_mse   R-squared:                       0.547
+Model:                            OLS   Adj. R-squared:                  0.500
+Method:                 Least Squares   F-statistic:                     12.99
+Date:                Wed, 24 Dec 2025   Prob (F-statistic):           4.61e-08
+Time:                        09:20:37   Log-Likelihood:                 150.43
+No. Observations:                  55   AIC:                            -288.9
+Df Residuals:                      49   BIC:                            -276.8
+Df Model:                           5                                         
+Covariance Type:                  HC1                                         
+=====================================================================================
+                        coef    std err          z      P>|z|      [0.025      0.975]
+-------------------------------------------------------------------------------------
+const                 0.1137      0.023      4.861      0.000       0.068       0.159
+log_n_estimators     -0.0035      0.003     -1.089      0.276      -0.010       0.003
+max_depth             0.0078      0.002      5.148      0.000       0.005       0.011
+log_learning_rate     0.0085      0.005      1.772      0.076      -0.001       0.018
+subsample            -0.0034      0.021     -0.159      0.874      -0.045       0.038
+colsample_bytree     -0.0041      0.028     -0.147      0.884      -0.059       0.051
+==============================================================================
+Omnibus:                       16.885   Durbin-Watson:                   2.030
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               20.674
+Skew:                           1.206   Prob(JB):                     3.24e-05
+Kurtosis:                       4.791   Cond. No.                         86.2
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC1)
